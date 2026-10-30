@@ -1,8 +1,8 @@
 # Raahi — Capability-Match Ambulance–Hospital Coordination System
 
-> **Hackathon:** CodeCraft / Technofora '26  
+> **Hackathon:** NU Hackathon '26  
 > **Track:** HealthTech — Accessible Care & Intelligent Patient Support  
-> **Repository Status:** `Phase 1 — Foundation Initialized` (Scaffolding & Architecture Baseline)
+> **Repository Status:** `Complete — Fully Implemented & Deployed`
 
 ---
 
@@ -27,19 +27,21 @@ Emergency medical transport frequently suffers from critical coordination gaps:
 
 ---
 
-## 3. Current Repository State vs. Roadmap
+## 3. Implementation Status
 
 | Area | Status | Description |
 |---|---|---|
 | **Documentation & Specification** | ✅ Complete | Full PRD, architectural diagrams, data model, API contracts, task board, and mobile spec in `docs/`. |
 | **Project Scaffolding** | ✅ Complete | Monorepo layout with React/Vite frontend and Firebase Cloud Functions backend. |
 | **Configuration & Environment** | ✅ Complete | `.env.example`, `.gitignore`, `firebase.json`, `firestore.rules`, and workspace configs. |
-| **Deterministic Matching Engine** | ⏳ Planned (Phase 3) | Structured scoring and multi-criteria ranking algorithm. |
-| **Firestore State Machine & Transactions** | ⏳ Planned (Phase 4, 7, 8) | Lifecycle states (`pending`, `accepted`, `rejected`, `timed_out`, `superseded`) & atomic holds. |
-| **Role-Specific Web Interfaces** | ⏳ Planned (Phase 5, 6) | Dedicated Ambulance, Hospital Reception, and Admin/Oversight views. |
-| **Mass-Casualty Incident Coordination** | ⏳ Planned (Phase 9) | Batch distribution algorithm across regional hospital networks. |
-| **Audit Log & Reliability Engine** | ⏳ Planned (Phase 10) | Historical event timeline and hospital response fidelity tracking. |
-| **Driver Mobile Demo Experience** | ⏳ Planned (Later Stage) | Lightweight driver navigation/status view specified in `docs/mobile-demo.md`. |
+| **Deterministic Matching Engine** | ✅ Complete | Multi-criteria scoring engine with capability match, distance, load, freshness, and reliability factors. |
+| **Firestore State Machine & Transactions** | ✅ Complete | Full lifecycle states (`pending`, `accepted`, `rejected`, `timed_out`, `superseded`) & atomic holds. |
+| **Role-Specific Web Interfaces** | ✅ Complete | Ambulance, Hospital Coordinator, Admin/Oversight, and Family Tracking views. |
+| **Mass-Casualty Incident Coordination** | ✅ Complete | Joint optimization and multi-hospital distribution across regional networks. |
+| **Audit Log & Reliability Engine** | ✅ Complete | Immutable event timeline and hospital response fidelity tracking. |
+| **AI Explanation Layer** | ✅ Complete | Non-authoritative Groq/Gemini explanations for routing decisions (never override deterministic logic). |
+| **Real-Time Cross-Portal Sync** | ✅ Complete | Live bidirectional sync between Ambulance, Hospital, and Admin portals via Firestore subscriptions. |
+| **Notification System** | ✅ Complete | Push notification bus for in-app real-time alerts across all actor roles. |
 
 ---
 
@@ -247,15 +249,15 @@ The system is designed to demonstrate three primary clinical workflows during ju
 ## 14. Development Roadmap
 
 - [x] Phase 1: Repository foundation, monorepo scaffolding, and documentation baseline.
-- [ ] Phase 2: Shared TypeScript data models and domain contracts.
-- [ ] Phase 3: Deterministic capability matching engine.
-- [ ] Phase 4: Firestore database integration and backend services.
-- [ ] Phase 5: Role-based frontend application shell.
-- [ ] Phase 6: Vertical slice integration (Scenario A).
-- [ ] Phase 7: Time-bounded commitment protocol & state machine.
-- [ ] Phase 8: Concurrency safety & atomic resource holds.
-- [ ] Phase 9: Mass-casualty optimization & multi-case distribution.
-- [ ] Phase 10: Stale-data degradation, audit trail, and reliability metrics.
-- [ ] Phase 11: Admin live oversight and mid-transit rerouting.
-- [ ] Phase 12: Natural language explanation layer.
-- [ ] Phase 13: End-to-end hardening, testing, and deployment.
+- [x] Phase 2: Shared TypeScript data models and domain contracts.
+- [x] Phase 3: Deterministic capability matching engine.
+- [x] Phase 4: Firestore database integration and backend services.
+- [x] Phase 5: Role-based frontend application shell.
+- [x] Phase 6: Vertical slice integration (Scenario A).
+- [x] Phase 7: Time-bounded commitment protocol & state machine.
+- [x] Phase 8: Concurrency safety & atomic resource holds.
+- [x] Phase 9: Mass-casualty optimization & multi-case distribution.
+- [x] Phase 10: Stale-data degradation, audit trail, and reliability metrics.
+- [x] Phase 11: Admin live oversight and mid-transit rerouting.
+- [x] Phase 12: Natural language explanation layer (Groq primary / Gemini fallback).
+- [x] Phase 13: End-to-end hardening, testing, and deployment.

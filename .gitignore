@@ -52,3 +52,24 @@ Thumbs.db
 # Temp files
 tmp/
 temp/
+
+# Media files (videos, presentations, audio) — exclude large/demo media
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.pdf
+*.ppt
+*.pptx
+*.ogg
+*.mp3
+*.wav
+# Keep app UI assets: frontend/public/*.mp4 is intentionally tracked
+!frontend/public/raahi-intro.mp4
+
+# Random / unnamed media files at root
+*.png
+# Keep intentional images
+!frontend/public/*.png
+!frontend/public/*.svg
+!public/*.png
